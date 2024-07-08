@@ -17,14 +17,14 @@ function NumberSumUp(props) {
 
     function cal() {
         let data = JSON.stringify({
-            "start_num": startNum,
-            "end_num": endNum
+            "start_num": Number(startNum),
+            "end_num": Number(endNum)
         });
 
         let config = {
             method: 'post',
             maxBodyLength: Infinity,
-            url: BaseUrl+'chat/sum_numbers/',
+            url: BaseUrl + 'chat/sum_numbers/',
             headers: {
                 'Content-Type': 'application/json'
             },
